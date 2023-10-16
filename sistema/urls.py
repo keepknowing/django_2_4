@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import keep
+from django.views import debug
+from . import views
+
 
 urlpatterns = [
-    path('keep/', keep),
+    path('', debug.default_urlconf),
+    path('keep/', views.keep, name='keep'),
     path('admin/', admin.site.urls),
 ]
