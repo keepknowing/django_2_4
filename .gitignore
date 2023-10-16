@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
 
 # personal file with steps documentation
-django_sbs.ipynb
+# django_sbs.ipynb
 project_steps.txt
 
 ### Django ###
