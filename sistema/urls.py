@@ -24,5 +24,6 @@ urlpatterns = [
     path('', debug.default_urlconf),
     path('keep/', views.keep, name='keep'),
     path('filtro/<int:year>/', views.year_filter),
+    path('dados/', views.dados),
     path('admin/', admin.site.urls),
 ]
