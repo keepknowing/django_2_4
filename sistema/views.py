@@ -6,3 +6,7 @@ def keep(request):
 
 def home(request):
     return HttpResponse('HOME - MAIN PAGE')
+
+def year_filter(request, year):
+    r = 'O ano selecionado é {}'.format(year)
+    return HttpResponse(r)
