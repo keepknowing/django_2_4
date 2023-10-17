@@ -13,4 +13,4 @@ def year_filter(request, year):
     return HttpResponse(r)
 
 def dados(request):
-    return render(request,'index.html')
+    return render(request,'dados.html')
