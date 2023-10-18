@@ -9,7 +9,7 @@ class Clientes(models.Model):
     # socio = models.BooleanField()
     cpf = models.CharField(max_length=11, help_text='CPF - Apenas Números')
     email = models.EmailField(max_length=80)
-
+    photo = models.ImageField(upload_to='clientes_photos', null=True, blank=True)
 
     def __str__(self) -> str:
         return '{} {}'.format(self.nome.title(),self.sobrenome.title())
