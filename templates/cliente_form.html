@@ -9,7 +9,7 @@
     <h1>Keep Knowing</h1>
     <hr>
     <h3>Formulario de inclusao de cliente</h3>
-    <form action="{% url 'add_clientes' %}" method="POST" enctype="multipart/form-data">  <!-- methods GET POST DELETE OPTIONS> -->
+    <form method="POST" enctype="multipart/form-data">  methods GET POST DELETE OPTIONS>
         {% csrf_token %}
         {{ form }}
         <button type="submit">Salvar</button>    

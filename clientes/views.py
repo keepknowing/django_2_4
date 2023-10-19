@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect , get_object_or_404
 from . import forms
 
 from . import models
@@ -12,8 +12,19 @@ def lista_clientes(request):
 
 
 def add_cliente(request):
-    form = forms.ClienteForm(request.POST, request.FILES , None)
+    form = forms.ClienteForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
         return redirect('mostra_clientes')
     return render(request, 'cliente_form.html', {'form':form})
+
+
+def update_cliente(request, id):
+    cliente = get_object_or_404(models.Clientes, pk=id)
+    form = forms.ClienteForm(request.POST or None, request.FILES or None, instance=cliente)
+
+    if form .is_valid():
+        form.save()
+        return redirect('mostra_clientes')
+    
+    return render(request, 'cliente_form.html', {'form':form}) 

@@ -10,9 +10,14 @@
     <h1>Html page in Templates </h1>
     <ul>
         {% for person in persons %}
-            <li>{{ person.nome }}</li>
+
+            <li><a href="{% url 'updt_cli' person.id %}">{{ person.nome }}</a></li>
+
         {% endfor %}
     </ul>
+
+    <hr>
+    <a href="{% url 'add_clientes' %}"><button>Novo Cliente</button></a>
 
 </body>
 </html>
