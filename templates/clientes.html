@@ -8,5 +8,11 @@
 <body>
     <hr>
     <h1>Html page in Templates </h1>
+    <ul>
+        {% for person in persons %}
+            <li>{{ person.nome }}</li>
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
